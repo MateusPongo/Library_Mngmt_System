@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Slide show
+	</title>
+	<meta charset="utf-8">
+	<meta charset="viewport" content="width=device-width", initial-scale=1>
+	<link rel="stylesheet" href="http://www.w3schools.com/w3css/4/w3.css" >
+</head>
+<body style="background-color: black">
+		<div class="w3-content w3section" style="width: 1000px;">
+			<img class="mySlide w3-animator-fading " src="images/4.jpg"  style="width: 100%">
+			<img class="mySlide w3-animator-left " src="images/on.jpg" style="width: 100%">
+			<img class="mySlide w3-animator-top" src="images/pc.jpg" style="width: 100%">
+			<img class="mySlide w3-animator-top" src="images/lb.jpg" style="width: 100%">
+			
+		</div>
+	<script type="text/javascript">
+		var a=0;
+		carousel();
+
+		function carousel()
+		{
+			var i;
+			var x=document.getElementsByClassName('mySlide');
+			
+			for(i=0; i<x.length; i++)
+			{
+				x[i].style.display="none";
+			}
+
+			a++;
+			if (a>x.length) {a=1}
+				x[a-1].style.display = "block";	 
+			setTimeout(carousel, 3000);
+		}
+	</script>	
+
+</body>
+</html>
